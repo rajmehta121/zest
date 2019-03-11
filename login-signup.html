@@ -1,0 +1,268 @@
+<head>
+<meta charset="UTF-8">
+<title>Login|Sign-Up Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="http://gambolthemes.net/html/workwise/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+	function validatePassword()
+	{
+		var pass = Document.getElementById("password");
+		if(Document.getElementById("repeat-password") != pass)
+		{
+			Document.getElementById("pass").innerHTML = "Not Matching";
+		}
+	}
+</script>
+<style>
+.sign_in_sec form button{
+	background-color: #A6392B;
+}
+.signup-tab ul li.current a{
+	background-color: #BB4030;
+}
+#header{
+    background: #313131;
+    color: #d5d5d5;
+    cursor: default;
+    height: 5em;
+    left: 0;
+    line-height: 5em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10001;
+}
+
+#header .logo {
+    font-family: 'Pacifico', cursive;
+    display: inline-block;
+    height: inherit; 
+    left: 0;
+    line-height: inherit;
+    margin: 0 50px;
+    padding: 0;
+    position: relative;
+    top: 0;
+    color: white;
+    font-size: 1.75em;
+    text-transform: none;
+    font-weight: normal;
+    padding: 0;
+    text-decoration: none;
+}
+
+#header .logo:hover {
+    color: rgba(229, 71, 75, 0.75);
+</style>
+</head>
+<body class="sign-in" oncontextmenu="return false;" style = "background:linear-gradient(to top right, #08aeea 0%, #b721ff 100%);">
+	<!--background-image: url('images/bg-01.jpg'); background-size: 100%-->
+
+	<!-- Header Begin-->
+		<header id="header">
+			<div class="inner">
+				<a href="index.html" class="logo">Zest</a>
+			</div>
+		</header>
+	<!-- Header End -->
+	
+
+	<div class="wrapper" style="margin-top: 30px;">
+		<div class="sign-in-page" >
+			<div class="signin-popup">
+				<div class="signin-pop">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="cmp-info">
+								<div class="cm-logo"> 
+									<p style = "font-size: 40px;"><b>ZEST</b></p><br><br>
+									<p>Due to busy schedule of teachers and students, there is a communication gap between them. With context to authenticity students always have confusion regarding the reliability of available source.So to create a bridge between them (we have created Zest)or we are introducing this platform</p>
+								</div><!--cm-logo end-->	
+								<img src="images/login-book.JPG" alt="" style="height: 45%">			
+							</div><!--cmp-info end-->
+						</div>
+						<div class="col-lg-6">
+							<div class="login-sec">
+								<ul class="sign-control" style = "display: flex; align-items: center; justify-content: center; padding: 0px;">
+									<li data-tab="tab-1" class="current"><a href="#" title="">Sign in</a></li>				
+									<li data-tab="tab-2"><a href="#" title="">Sign up</a></li>				
+								</ul>			
+								<div class="sign_in_sec current" id="tab-1">
+									
+									<img src="images/user.png" alt="user profile.png" id="img1" style="position: relative; padding-bottom: 10px; margin-bottom: 30px; margin-left: 40%">
+									<form action = "login.php" method = "POST">
+										<div class="row">
+											<div class="col-lg-12 no-pdd">
+												<div class="sn-field">
+													<input type="text" name="username" placeholder="Username">
+													<i class="fa fa-user" aria-hidden="true"></i>
+												</div><!--sn-field end-->
+											</div>
+											<div class="col-lg-12 no-pdd">
+												<div class="sn-field">
+													<input type="password" name="password" placeholder="Password">
+													<i class="fa fa-lock" aria-hidden="true"></i>
+												</div>
+											</div>
+											<div class="col-lg-12 no-pdd" style = "display: flex; align-items: center; justify-content: center;">
+												<button type="submit" value="login">Sign in</button>
+											</div>
+											<div class="col-lg-12 no-pdd">
+												<div class="checky-sec" style="display: flex; align-items: center; justify-content: center;">
+													<a href="#" title="">Forgot Password?</a>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div><!--sign_in_sec end-->
+								<div class="sign_in_sec" id="tab-2">
+									<div class="signup-tab">
+										<ul>
+											<li data-tab="tab-3" class="current"><a href="#" title="">Teacher</a></li>
+											<li data-tab="tab-4"><a href="#" title="">Student</a></li>
+										</ul>
+									</div><!--signup-tab end-->	
+									<div class="dff-tab current" id="tab-3">
+										<form action="login.php" method="POST">
+											<div class="row">
+												<div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input type="text" name="name" placeholder="Full Name" required="true">
+														<i class="fa fa-user" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input type="text" name="phoneno" placeholder="Mobile Number" required="true">
+														<i class="fa fa-phone" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input type="email" name="email" placeholder="E-Mail" required="true">
+														<i class="fa fa-envelope" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input type="date" min="2000-01-01" name="dob" required="true">
+														<i class="fa fa-birthday-cake" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input type="text" name="username" placeholder="Username" required="true">
+														<i class="fa fa-user" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input type="password" name="password" id = "password" placeholder="Password" required="true">
+														<i class="fa fa-lock" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input type="password" name="repeat-password" id="repeat-password" placeholder="Repeat Password" required="true" onkeypress="validatePassword()"><span style="color:darkred;" id="pass"></span>
+														<i class="fa fa-lock" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd" >
+													<div class="sn-field">
+														<select name="qualifications" title="Select Degree">
+															<option>B.Ed</option>
+															<option>M.Tech</option>
+															<option>B.Tech</option>
+															<option>PhD</option>
+														</select>
+														<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+														<span><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd" style="display: flex; align-items: center; justify-content: center;">
+													<button type="submit" name = "submit" value="teacher">Register</button>
+												</div>
+											</div>
+										</form>
+									</div><!--dff-tab end-->
+									<div class="dff-tab" id="tab-4">
+										<form action = "login.php" method = "POST" >
+											<div class="row">
+												<div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input type="text" name="name" placeholder="Full Name" required="true">
+														<i class="fa fa-user" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input type="text" name="phoneno" placeholder="Mobile Number" required="true">
+														<i class="fa fa-phone" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input type="email" name="email" placeholder="E-Mail" required="true">
+														<i class="fa fa-envelope" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input type="date" min="1980-01-01" name="dob" required="true">
+														<i class="fa fa-birthday-cake" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input type="text" name="username" placeholder="Username" required="true">
+														<i class="fa fa-user" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input type="password" name="password" id="password" placeholder="Password" required="true">
+														<i class="fa fa-lock" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input type="password" name="repeat-password" placeholder="Repeat Password" id="repeat-password" required="true" onkeypress="validatePassword()"><span style="color:darkred;" id="pass"></span>
+														<i class="fa fa-lock" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd" >
+													<div class="sn-field">
+														<select name="college" title="Select Degree">
+															<option>VJTI</option>
+															<option>K.J.Somaiya College of Engineering</option>
+															<option>D.J.Sanghvi</option>
+														</select>
+														<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+														<span><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd" style="display: flex; align-items: center; justify-content: center;">
+													<button type="submit" name = "submit" value="student">Register</button>
+												</div>
+											</div>
+										</form>
+									</div><!--dff-tab end-->
+								</div>		
+							</div><!--login-sec end-->
+						</div>
+					</div>		
+				</div><!--signin-pop end-->
+			</div><!--signin-popup end-->
+		</div><!--sign-in-page end-->
+	</div><!--theme-layout end-->
+
+<script type="text/javascript" src="http://gambolthemes.net/html/workwise/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://gambolthemes.net/html/workwise/js/popper.js"></script>
+<script type="text/javascript" src="http://gambolthemes.net/html/workwise/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://gambolthemes.net/html/workwise/lib/slick/slick.min.js"></script>
+<script type="text/javascript" src="http://gambolthemes.net/html/workwise/js/script.js"></script>
+</body>
